@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.ContactDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-23T13:52:24" hostname="DESKTOP-RG5J9B4" time="0.415">
+  <properties/>
+  <testcase name="testContactDeletion" classname="ru.stqa.pft.addressbook.tests.ContactDeletionTest" time="0.415"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1661262739327	geckodriver	INFO	Listening on 127.0.0.1:63736
+1661262740300	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52623" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://localhost:52623/" "-no-remote" "-profile" "C:\\Users\\Bosov\\AppData\\Local\\Temp\\rust_mozprofile8oJKK0"
+1661262741042	Marionette	INFO	Marionette enabled
+1661262741051	Marionette	INFO	Listening on port 51745
+WebDriver BiDi listening on ws://localhost:52623
+Read port: 51745
+1661262741351	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Bosov\\AppData\\Local\\Temp\\rust_mozprofile8oJKK0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52623/devtools/browser/bc550c72-9b47-4042-a464-6ece024947c0
+Aug 23, 2022 4:52:23 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+]]></system-err>
+</testsuite>
