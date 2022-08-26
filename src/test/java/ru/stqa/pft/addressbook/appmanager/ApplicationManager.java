@@ -1,8 +1,12 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.fail;
@@ -17,13 +21,26 @@ public class ApplicationManager {
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
+  private String browser;
+
+  public ApplicationManager(String browser){
+
+    this.browser = browser;
+  }
 
   public void init() {
     System.setProperty("webdriver.gecko.driver","C:\\programming_autotesting\\java\\addressbook-web-tests\\src\\main\\java\\geckodriver.exe");
 
-    driver = new FirefoxDriver();
+    if (browser.equals(BrowserType.FIREFOX)){
+      driver = new FirefoxDriver();
+    }else if (Objects.equals(browser, BrowserType.CHROME)){
+      driver = new ChromeDriver();
+    }else if (Objects.equals(browser, BrowserType.IE)){
+      driver = new InternetExplorerDriver();
+    }else
+
     baseUrl = "https://www.google.com/";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     driver.get("http://localhost/addressbook/");
     groupHelper = new GroupHelper(driver);
     navigationHelper = new NavigationHelper(driver);
